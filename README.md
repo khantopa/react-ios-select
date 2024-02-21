@@ -5,6 +5,8 @@
 
 `react-ios-select` is a React component that provides an iOS-style select menu for your web applications. It offers a sleek and intuitive way for users to make selections, mimicking the experience of selecting options on an iOS device.
 
+![Demo](./ios-select.gif)
+
 ## Installation
 
 You can install `react-ios-select` via npm:
@@ -83,5 +85,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you encounter any issues or have suggestions for improvements, please feel free to [open an issue](https://github.com/khantopa/react-ios-select/issues).
 
 ---
-
-Replace `yourusername` in the Issues section with your GitHub username if you're hosting the project on GitHub. This template provides a basic structure for your README, but feel free to customize it further to suit your project's specific needs.

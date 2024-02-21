@@ -79,6 +79,7 @@ export const Height = () => {
           width: '100%',
           fontFamily:
             '"Source Sans Pro", HelveticaNeue, Helvetica, Arial, Sans;',
+          marginTop: 100,
         }}
       >
         <Picker

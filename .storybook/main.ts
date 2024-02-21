@@ -1,18 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import { Configuration, RuleSetRule } from 'webpack';
 
-// const config: StorybookConfig = {
-//   // Required
-//   framework: '@storybook/react-webpack5',
-//   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(ts|tsx)'],
-//   // Optional
-//   addons: ['@storybook/addon-essentials'],
-//   docs: {
-//     autodocs: 'tag',
-//   },
-
-// };
-
 const config: StorybookConfig = {
   // ...
   typescript: {
