@@ -1,14 +1,9 @@
-:root {
-  --item-color: #282828;
-  --background-color: transparent;
-  --highlight-color: #F4F5F6;
-}
 
 .IOS_Select_Container {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: var(--background-color);
+  background: transparent;
 }
 
 .IOS_Select_Item_Container {
@@ -16,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: var(--background-color);
+  background: transparent;
   z-index: 2;
   outline: none;
   transition: 0s ease-out;
@@ -31,7 +26,7 @@
   height: 48px;
   width: 100%;
   pointer-events: none;
-  background: var(--highlight-color);
+  background: #F4F5F6;
   border-radius: 16px;
 }
 
@@ -45,7 +40,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
-  color: var(--item-color);
+  color: #282828;
   font-size: 20px;
   font-weight: 600;
   transition: 0.3s ease-in-out;
