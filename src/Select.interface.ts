@@ -1,4 +1,4 @@
-export interface IPickerItemValue<T = unknown> {
+export interface ISelectItemValue<T = unknown> {
   id: string;
   label: string;
   value: T;
@@ -6,14 +6,14 @@ export interface IPickerItemValue<T = unknown> {
   style?: React.CSSProperties;
 }
 
-export interface IPickerItem<T = unknown> extends IPickerItemValue<T> {
+export interface ISelectItem<T = unknown> extends ISelectItemValue<T> {
   isSelected: boolean;
   onClick: () => void;
 }
 
-export interface IPicker<T> {
-  options: IPickerItemValue<T>[];
-  value: IPickerItemValue<T>;
+export interface ISelect<T> {
+  options: ISelectItemValue<T>[];
+  value: ISelectItemValue<T>;
   /**
    * @default true
    */

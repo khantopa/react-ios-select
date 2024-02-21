@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import React, { FC } from 'react';
 import Picker from '.';
-// import Docs from './Picker.mdx';
-import { action } from '@storybook/addon-actions';
+import { ISelectItemValue } from './Select.interface';
 
-const meta: Meta<typeof Picker> = {
-  component: Picker,
-  tags: ['autodocs'],
-};
 const options = [
   '123 cm',
   '124 cm',
@@ -45,16 +39,33 @@ const options = [
   '175 cm',
 ].map((item) => ({ id: item, label: item, value: item }));
 
-export default meta;
-
-type Story = StoryObj<typeof Picker>;
-
-const WithKnobs = () => {
+export const PickerMain: FC = () => {
   const [value, setValue] = React.useState(options[10]);
 
-  useEffect(() => {
-    action('onChange')(value);
-  }, [value]);
+  return (
+    <div
+      style={{
+        boxSizing: 'border-box',
+        background: 'white',
+        height: 500,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+      }}
+    >
+      <Picker
+        value={value}
+        options={options}
+        onChange={setValue}
+        height={500}
+      />
+    </div>
+  );
+};
+
+export const Height = () => {
+  const [value, setValue] = React.useState(options[10]);
 
   return (
     <>
@@ -81,6 +92,6 @@ const WithKnobs = () => {
   );
 };
 
-export const HeightSelect: Story = {
-  render: () => <WithKnobs />,
+export const PropsTablePickerItemValue: FC<ISelectItemValue> = () => {
+  return <div>Props table component for story</div>;
 };

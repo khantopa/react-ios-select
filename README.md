@@ -50,11 +50,25 @@ export default MyComponent;
 
 ## Props
 
-- `options` (array): An array of objects representing the options available in the select menu. Each object should have `value` and `label` properties.
-- `onChange` (function): A callback function that is called whenever the selected option changes. It receives the selected option object as an argument.
-- `defaultValue` (string): The default selected option value.
-- `disabled` (boolean): Disables the select menu if set to `true`.
-- `className` (string): Additional CSS class names to apply to the select menu.
+| Property  | Type                         | Default | Description                                                           |
+| --------- | ---------------------------- | ------- | --------------------------------------------------------------------- |
+| options   | `ISelectItemValue<T>[]`      |         | An array of objects representing the options available for selection. |
+| value     | `ISelectItemValue<T>`        |         | The currently selected option.                                        |
+| autoFocus | `boolean`                    | `true`  | If `true`, the select menu will automatically receive focus.          |
+| height    | `number`                     | `250`   | The height of the select menu, specified in pixels.                   |
+| className | `string`                     |         | Additional CSS class names to apply to the select menu.               |
+| style     | `React.CSSProperties`        |         | Additional inline styles to apply to the select menu.                 |
+| onChange  | `(valueGroups: any) => void` |         | A callback function invoked when the selected option changes.         |
+
+### ISelectItemValue<T>
+
+| Property  | Type                  | Description                                      |
+| --------- | --------------------- | ------------------------------------------------ |
+| id        | `string`              | The unique identifier for the item.              |
+| label     | `string`              | The label or display text for the item.          |
+| value     | `T`                   | The value associated with the item.              |
+| className | `string`              | Additional CSS class names for styling purposes. |
+| style     | `React.CSSProperties` | Additional inline styles for styling purposes.   |
 
 ## Example
 

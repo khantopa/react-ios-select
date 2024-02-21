@@ -50,6 +50,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.23.9",
+    "@mdx-js/loader": "^3.0.1",
     "@size-limit/preset-small-lib": "^11.0.2",
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-info": "^5.3.21",

@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 
-import { IPickerItem } from './Picker.interface';
+import { ISelectItem } from './Select.interface';
 import './styles.css';
 
 // const { xsmall, small } = spacing;
 
 export const itemHeight = 48;
 
-const PickerItem: FC<IPickerItem> = ({
+const PickerItem: FC<ISelectItem> = ({
   id,
   label,
   isSelected,
@@ -20,7 +20,7 @@ const PickerItem: FC<IPickerItem> = ({
   return (
     <div
       onClick={onClick}
-      className="Picker_Item"
+      className="IOS_Select_Item"
       aria-selected={isSelected}
       role="option"
       data-cy-picker-item={id}
