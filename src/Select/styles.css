@@ -1,0 +1,57 @@
+:root {
+  --item-color: #282828;
+  --background-color: transparent;
+  --highlight-color: #F4F5F6;
+}
+
+.Picker_Container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--background-color);
+}
+
+.Picker_Item_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: var(--background-color);
+  z-index: 2;
+  outline: none;
+  transition: 0s ease-out;
+}
+
+.Picker_Highlight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  height: 48px;
+  width: 100%;
+  pointer-events: none;
+  background: var(--highlight-color);
+  border-radius: 16px;
+}
+
+.Picker_Item {
+  box-sizing: border-box;
+  text-align: center;
+  height: 48px;
+  width: 100%;
+  padding: 12px 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--item-color);
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.Picker_Item [aria-selected='true'] {
+  z-index: 2;
+  cursor: default;
+}
